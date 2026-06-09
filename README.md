@@ -1,4 +1,4 @@
-# [Aitoearn：OPC（一人公司）的AI内容营销智能体](https://aitoearn.ai)
+# [AiToEarn: AI content marketing agent for one-person companies](https://aitoearn.ai)
 
 <a href="https://trendshift.io/repositories/20785" target="_blank"><img src="https://trendshift.io/api/badge/repositories/20785" alt="yikart%2FAiToEarn | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
@@ -6,195 +6,189 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Required Node.JS 20.18.x](https://img.shields.io/static/v1?label=node&message=20.18.x&logo=node.js&color=3f893e)](https://nodejs.org/about/releases)
 
-简体中文 | [English](README_EN.md) | [日本語](README_JA.md)
+English | [简体中文](README_ZH.md) | [日本語](README_JA.md)
 
-**Monetize · Publish · Engage · Create —— 一站式平台。**
+**Monetize · Publish · Engage · Create - all in one platform.**
 
-AiToEarn 通过 **AI Agent自动化**，帮助 OPC（一人公司）、创作者、品牌与企业在全球主流平台上构建、分发并变现内容。
+AiToEarn helps OPCs (One-Person Companies), creators, brands, and businesses build, distribute, and monetize content with **AI-powered automation** across the world's most popular platforms.
 
-支持渠道：
-抖音、小红书（Rednote）、快手、哔哩哔哩、视频号、TikTok、YouTube、Facebook、Instagram、Threads、Twitter（X）、Pinterest、LinkedIn
+Supported Channels:
+Douyin, Xiaohongshu (Rednote), Kuaishou, Bilibili, WeChat Channels, WeChat Official Accounts, TikTok, YouTube, Facebook, Instagram, Threads, Twitter (X), Pinterest, LinkedIn
 
-## 🚀 快速使用 AiToEarn（5 种方式）
+## 🚀 Quick Start with AiToEarn (5 Ways)
 
-| 方式 | 适合谁 | 需要部署吗 |
-|------|--------|-----------|
-| [① 打开网站直接用](#use-web) | 所有用户 | ❌ 不需要 |
-| [② 在龙虾 OpenClaw 中用](#use-in-openclaw) | 龙虾用户 | ❌ 不需要 |
-| [③ 在 Claude / Cursor 等 AI 助手中用](#use-in-claude) | AI 工具用户 | ❌ 不需要 |
-| [④ Docker 一键部署](#use-docker) | 想私有化部署的团队 | ✅ 需要服务器 |
-| [⑤ 源码开发](#use-source) | 开发者 | ✅ 需要开发环境 |
+| Option | Best for | Deployment needed? |
+|--------|----------|-------------------|
+| [① Use the Website](#use-web) | Everyone | ❌ No |
+| [② Use in OpenClaw](#use-in-openclaw) | OpenClaw users | ❌ No |
+| [③ Use in Claude / Cursor / Other AI Assistants](#use-in-claude) | AI tool users | ❌ No |
+| [④ Docker One-Click Deploy](#use-docker) | Teams wanting self-hosted | ✅ Server needed |
+| [⑤ Build from Source](#use-source) | Developers | ✅ Dev environment needed |
 
-> 💡 **方式 ②③④ 都需要先获取 API Key**，请先看 [如何获取 API Key](#get-api-key)。
+> 💡 **Options ②③④ require an API Key first.** See [How to Get an API Key](#get-api-key).
 
-## 最新动态
+## What's New
 
-- **2026-05-21**: [2.4 version](https://github.com/yikart/AiToEarn/releases/tag/v2.4.0) — 草稿生成新增支持 HappyHorse 1.0 和 Seedance 2.0，增强视频/图文草稿批量生成、多模型选择、参考图片/视频、目标平台限制与文案提示词；带来全新界面风格，并增强 Twitter/X 探索与互动能力。
-- **2026-04-20**: OpenClaw（龙虾）新增 AiToEarn 赚钱支持，可在龙虾中直接接收并执行内容变现任务。
-- **2026-03-26**: [2.1 version](https://www.aitoearn.ai/) — 内容交易市场上线；新增 OpenClaw（龙虾）支持，可在龙虾中直接使用 AiToEarn；新增 MCP 协议支持，可在 Claude、Cursor 等任何支持 MCP 的 Agent 或大模型中使用 AiToEarn。
-- **2026-02-07**: [1.8.0 version](https://www.aitoearn.ai/)，新增线下商户推广解决方案，支持餐厅、零售店、民宿、美容美发、健身房等多种线下业态，将线下推广活动转化为可执行的线上传播任务，通过内容发布与用户参与机制，帮助门店获取更多线上曝光和到店流量。
-- **2025-12-15**: "All In Agent" 的开始！我们加入了能够自动内容生成和发布以及一些帮助你操作 Aitoearn 的超级 AI 智能 Agent。[v1.4.3](https://github.com/yikart/AiToEarn/releases/tag/v1.4.3)
-- **2025-11-28**: 支持应用内自动更新。在创作界面新增大量 AI 功能，例如：缩写、扩写、图片生成、视频生成、标签生成等，并支持 Nano Banana Pro。[v1.4.0](https://github.com/yikart/AiToEarn/releases/tag/v1.4.0)
-- **2025-11-12**: 首个开源且可完全使用的版本。[v1.3.2](https://github.com/yikart/AiToEarn/releases/tag/v1.3.2)
-- **2025-09-16**: 首个出海版本，新增支持 Facebook、Instagram、Threads、Twitter、YouTube、TikTok、Pinterest。[v1.0.18](https://github.com/yikart/AiToEarn/releases/tag/v1.0.18)
-- **2025-02-26**: 首个开源版本，初步实现小红书、抖音、快手、视频号视频一键发布。[v0.1.1](https://github.com/yikart/AiToEarn/releases/tag/v0.1.1)
+- **2026-05-21**: [2.4 version](https://github.com/yikart/AiToEarn/releases/tag/v2.4.0) - Draft generation now supports HappyHorse 1.0 and Seedance 2.0, with improved batch video/image-text draft generation, multi-model selection, reference images/videos, target-platform limits, and caption prompts; refreshed interface style and enhanced Twitter/X exploration and engagement.
+- **2026-04-20**: OpenClaw now supports AiToEarn earning workflows, so you can receive and execute monetization tasks directly inside OpenClaw.
+- **2026-03-26**: [2.1 version](https://www.aitoearn.ai/) - Content marketplace launched; added OpenClaw support for using AiToEarn directly within OpenClaw; added MCP protocol support for using AiToEarn in Claude, Cursor, and any MCP-compatible Agent or LLM.
+- **2026-02-07**: [1.8.0 version](https://www.aitoearn.ai/) - Added offline business promotion solutions for restaurants, retail stores, hotels, beauty salons, gyms, and more.
+- **2025-12-15**: "All In Agent" arrives! We've introduced a super AI agent that can automatically generate and publish content. [v1.4.3](https://github.com/yikart/AiToEarn/releases/tag/v1.4.3)
+- **2025-11-28**: Support automatic updates within the application. Added AI functions: abbreviation, expansion, image creation, video creation, tag generation, etc. [v1.4.0](https://github.com/yikart/AiToEarn/releases/tag/v1.4.0)
+- **2025-11-12**: The first open-source, fully usable version. [v1.3.2](https://github.com/yikart/AiToEarn/releases/tag/v1.3.2)
+- **2025-09-16**: First international version, added support for Facebook, Instagram, Threads, Twitter, YouTube, TikTok, Pinterest. [v1.0.18](https://github.com/yikart/AiToEarn/releases/tag/v1.0.18)
+- **2025-02-26**: First open-source release, initial support for one-click publishing to Xiaohongshu, Douyin, Kuaishou, and WeChat Channels. [v0.1.1](https://github.com/yikart/AiToEarn/releases/tag/v0.1.1)
 
 <details>
-  <summary><h2 style="display:inline;margin:0">目录</h2></summary>
+  <summary><h2 style="display:inline;margin:0">Table of Contents</h2></summary>
 
   <br/>
 
-  1. [快速使用 AiToEarn（5 种方式）](#-快速使用-aitoearn5-种方式)
-  2. [最新动态](#最新动态)
-  3. [核心功能](#核心功能)
-  4. [如何获取 API Key](#get-api-key)
-  5. [贡献指南](#贡献指南)
-  6. [联系](#联系)
-  7. [推荐](#推荐)
+  1. [Quick Start with AiToEarn (5 Ways)](#-quick-start-with-aitoearn-5-ways)
+  2. [What's New](#whats-new)
+  3. [Key Features](#key-features)
+  4. [How to Get an API Key](#get-api-key)
+  5. [Contributing](#contributing)
+  6. [Contact](#contact)
+  7. [Recommended](#recommended)
 </details>
 
-## 核心功能
+## Key Features
 
-AiToEarn 围绕内容创作者的完整变现链路，提供四大 Agent 能力：
+AiToEarn provides four core Agent capabilities around the creator's full monetization pipeline:
 
 > **Monetize · Publish · Engage · Create**
 
 ---
 
-### 💰 Monetize —— 内容赚钱
+### 💰 Monetize - Earn from Your Content
 
-AiToEarn 最核心的目标：**帮助每一位创作者赚钱**。
+The core mission of AiToEarn: **help every creator earn money**.
 
-创作者可以在平台出售内容以完成商家的推广任务。所有结算以结果为导向，我们提供三种结算模式：
+Creators can sell content on the platform to complete brand promotion tasks. All settlements are results-driven, with three models:
 
-| 结算模式 | 全称 | 含义 |
-|---------|------|------|
-| **CPS** | Cost Per Sale | 按成交额结算 |
-| **CPE** | Cost Per Engagement | 按互动量结算 |
-| **CPM** | Cost Per Mille | 按播放量结算 |
+| Model | Full Name | Meaning |
+|-------|-----------|---------|
+| **CPS** | Cost Per Sale | Settle by transaction amount |
+| **CPE** | Cost Per Engagement | Settle by engagement count |
+| **CPM** | Cost Per Mille | Settle by view count |
 
 <img src="presentation/monetize-cn.png" width="30%">
 
 ---
 
-### 📢 Publish —— 内容发布 Agent
+### 📢 Publish - Content Publishing Agent
 
-一键将内容分发到全球 10+ 主流平台，告别逐个平台手动发布。
+Distribute content to 10+ major platforms worldwide with one click - no more manual posting on each platform.
 
-- **全网分发**：覆盖抖音、快手、B站、小红书、视频号、微信公众号、TikTok、YouTube、Facebook、Instagram、Threads、X（Twitter）、Pinterest、LinkedIn
-- **日历排期**：像排日程一样统一规划所有平台的内容发布时间
+- **Multi-Platform Distribution**: Douyin, Kwai, Bilibili, Rednote, WeChat Channels, WeChat Official Accounts, TikTok, YouTube, Facebook, Instagram, Threads, X (Twitter), Pinterest, LinkedIn
+- **Calendar Scheduler**: Plan and coordinate content publishing across all platforms like a calendar
 
 <img src="presentation/publish-cn.png" width="30%"> <img src="presentation/channel-cn.png" width="30%">
 
-> ▶ 观看演示视频
+> ▶ Watch Demo Video
 
 <a href="https://www.youtube.com/watch?v=5041jEKaiU8">
-  <img src="https://img.youtube.com/vi/5041jEKaiU8/0.jpg" alt="Publish 演示视频" width="480">
+  <img src="https://img.youtube.com/vi/5041jEKaiU8/0.jpg" alt="Publish Demo Video" width="480">
 </a>
 
 ---
 
-### 💬 Engage —— 内容互动 Agent
+### 💬 Engage - Content Engagement Agent
 
-通过 AiToEarn 浏览器插件，在上述所有平台上实现自动化互动运营。
+Automate engagement operations across all supported platforms via the AiToEarn browser extension.
 
-- **自动化操作**：自动点赞、收藏、关注，批量高效运营
-- **AI 智能回复**：调用大模型为每条评论生成针对性回复，精准互动
-- **评论挖掘**：识别"求链接""怎么购买"等高转化信号，快速响应
-- **品牌监测**：实时追踪关于你品牌的讨论，主动参与热点话题
+- **Automated Actions**: Auto-like, bookmark, and follow - batch operations at scale
+- **AI Smart Replies**: Use LLMs to generate targeted replies for each comment
+- **Comment Mining**: Detect high-conversion signals like "link please" or "how to buy" and respond instantly
+- **Brand Monitoring**: Track brand mentions in real-time and proactively join trending conversations
 
-> ▶ 观看演示视频
+> ▶ Watch Demo Video
 
 <a href="https://youtu.be/-QoHNrZBmp0">
-  <img src="./presentation/engage-thumbnail-cn.png" alt="Engage 演示视频" width="480">
+  <img src="./presentation/engage-thumbnail-cn.png" alt="Engage Demo Video" width="480">
 </a>
 
 ---
 
-### 🎨 Create —— 内容创作 Agent
+### 🎨 Create - Content Creation Agent
 
-我们用 Agent 的方式重构了内容制作流程。只需告诉 Agent 你的内容需求，它会自动完成从创意到成品的全部工作。
+We've rebuilt the content creation workflow with Agents. Just tell the Agent what you need - it handles everything from idea to finished product.
 
-**视频内容**：Agent 自动调用视频生成模型（Grok、Veo、Seedance 等）、视频翻译模块、视频剪辑模块，一站式完成视频制作。
+**Video Content**: The Agent automatically invokes video generation models (Grok, Veo, Seedance, etc.), video translation modules, and video editing modules to produce a complete video.
 
-**图文内容**：支持调用 Nano Banana 等顶级图片模型，自动生成高质量图文内容。
+**Image & Text Content**: Supports top-tier image models like Nano Banana to create high-quality visual content automatically.
 
-**批量生成**：支持批量下发创作任务，Agent 可并行生成多条内容，快速铺量，适合矩阵账号运营和大规模内容分发场景。
+**Batch Generation**: Submit creation tasks in bulk - the Agent generates multiple pieces of content in parallel, perfect for matrix account operations and large-scale content distribution.
 
-> ▶ 观看演示视频
+> ▶ Watch Demo Video
 
 <a href="https://youtu.be/y900LxIrZT4">
-  <img src="./presentation/display-1.5.2png.png" alt="Create 演示视频" width="480">
+  <img src="./presentation/display-1.5.2png.png" alt="Create Demo Video" width="480">
 </a>
 
 ---
 
-<h2 id="use-web">① 打开网站直接用</h2>
+<h2 id="use-web">① Use the Website</h2>
 
-最简单的方式，打开浏览器即可使用，无需任何配置：
+The simplest way - just open your browser:
 
-- 🇨🇳 中国用户访问：**[aitoearn.cn](https://aitoearn.cn/)**
-- 🌍 国际用户访问：**[aitoearn.ai](https://aitoearn.ai/)**
-
----
-
-<h2 id="get-api-key">🔑 如何获取 API Key（后续步骤的前置条件）</h2>
-
-> 以下的方式 ②③④ 都需要 API Key。只需获取一次，所有方式通用。
-
-**3 步获取**：
-
-1. 打开 [aitoearn.cn](https://aitoearn.cn/)（中国用户）或 [aitoearn.ai](https://aitoearn.ai/)（国际用户），注册并登录
-2. 点击左侧菜单 **设置**
-3. 在 **API Key** 中点击创建，复制生成的 Key
-
-<img src="presentation/app-screenshot/0.%20api-key/api-key-settings.png" alt="获取 API Key" width="600">
+- 🇨🇳 China users: **[aitoearn.cn](https://aitoearn.cn/)**
+- 🌍 International users: **[aitoearn.ai](https://aitoearn.ai/)**
 
 ---
 
-<h2 id="use-in-openclaw">② 在龙虾 OpenClaw 中使用</h2>
+<h2 id="get-api-key">🔑 How to Get an API Key (Required for Steps Below)</h2>
 
-> 前置条件：已 [获取 API Key](#get-api-key)
+> Options ②③④ all need an API Key. You only need to get it once.
 
+**3 steps**:
 
-**请在服务器终端输入以下命令！请在服务器终端输入以下命令！请在服务器终端输入以下命令！**
+1. Open [aitoearn.cn](https://aitoearn.cn/) (China) or [aitoearn.ai](https://aitoearn.ai/) (international), sign up and log in
+2. Click **Settings** in the left menu
+3. Go to **API Key**, click Create, and copy the generated key
 
-**安装插件**
+<img src="presentation/app-screenshot/0.%20api-key/api-key-settings.png" alt="Get API Key" width="600">
+
+> ⚠️ Keep your API Key safe. Do not share it with others.
+
+---
+
+<h2 id="use-in-openclaw">② Use in OpenClaw</h2>
+
+> Prerequisite: [Get an API Key](#get-api-key) first
+
+**Install the plugin**
 
 ```bash
 npx -y @aitoearn/openclaw-plugin-cli
 ```
 
-首次运行后会先让你选择环境并输入 API Key。请确保环境与 Key 匹配：
+On first run, select the environment and enter your API Key. Make sure they match: China uses an API Key from `aitoearn.cn`, and international uses one from `aitoearn.ai`. A mismatch returns 401.
 
-- 中国版：使用 `aitoearn.cn` 获取的 API Key
-- 国际版：使用 `aitoearn.ai` 获取的 API Key
+After setup, you can receive and execute AiToEarn earning tasks directly inside OpenClaw:
 
-环境和 Key 不匹配会导致 401。
-
-安装完成后，你就可以在 OpenClaw 中直接接收并执行 AiToEarn 的赚钱任务：
-
-<img src="presentation/openclaw-earn-demo.png" alt="在 OpenClaw 中执行 AiToEarn 赚钱任务" width="360">
+<img src="presentation/openclaw-earn-demo.png" alt="Run AiToEarn earning tasks in OpenClaw" width="360">
 
 ---
 
-<h2 id="use-in-claude">③ 在 Claude / Cursor / 其他 AI 助手中使用</h2>
+<h2 id="use-in-claude">③ Use in Claude / Cursor / Other AI Assistants</h2>
 
-> 前置条件：已 [获取 API Key](#get-api-key)
+> Prerequisite: [Get an API Key](#get-api-key) first
 
-AiToEarn 支持所有兼容 MCP 协议的 AI 助手。以下是常见工具的配置方式：
+AiToEarn works with any MCP-compatible AI assistant. Here's how to configure the most popular ones:
 
-请根据 API Key 来源选择地址，环境和 Key 不匹配会导致 401：
+Choose the URL that matches your API Key. A mismatched environment and key returns 401:
 
-| 环境 | MCP 地址 | SSE 地址 |
-|------|---------|---------|
-| 中国版 | `https://aitoearn.cn/api/unified/mcp` | `https://aitoearn.cn/api/unified/sse` |
-| 国际版 | `https://aitoearn.ai/api/unified/mcp` | `https://aitoearn.ai/api/unified/sse` |
+| Environment | MCP URL | SSE URL |
+|-------------|---------|---------|
+| China | `https://aitoearn.cn/api/unified/mcp` | `https://aitoearn.cn/api/unified/sse` |
+| International | `https://aitoearn.ai/api/unified/mcp` | `https://aitoearn.ai/api/unified/sse` |
 
 <details open>
 <summary><b>Claude Desktop</b></summary>
 
-找到并编辑 `claude_desktop_config.json`，添加：
+Find and edit `claude_desktop_config.json`, add:
 
 ```json
 {
@@ -203,7 +197,7 @@ AiToEarn 支持所有兼容 MCP 协议的 AI 助手。以下是常见工具的�
       "type": "http",
       "url": "https://aitoearn.ai/api/unified/mcp",
       "headers": {
-        "x-api-key": "你的API-Key"
+        "x-api-key": "your-api-key"
       }
     }
   }
@@ -215,38 +209,38 @@ AiToEarn 支持所有兼容 MCP 协议的 AI 助手。以下是常见工具的�
 <details>
 <summary><b>Cursor</b></summary>
 
-在 Cursor 的 MCP 设置中添加：
+In Cursor's MCP settings, add:
 
 ```
-MCP 地址：https://aitoearn.ai/api/unified/mcp
-认证 Header：x-api-key: 你的API-Key
+MCP URL: https://aitoearn.ai/api/unified/mcp
+Auth Header: x-api-key: your-api-key
 ```
 
 </details>
 
 <details>
-<summary><b>其他 AI 助手（通用配置）</b></summary>
+<summary><b>Other AI Assistants (Generic Config)</b></summary>
 
-任何支持 MCP 协议的工具，只需要两个信息：
+Any MCP-compatible tool just needs two pieces of info:
 
-| 配置项 | 值 |
-|--------|------|
-| **MCP 地址** | `https://aitoearn.ai/api/unified/mcp` |
-| **认证 Header** | `x-api-key: 你的API-Key` |
+| Setting | Value |
+|---------|-------|
+| **MCP URL** | `https://aitoearn.ai/api/unified/mcp` |
+| **Auth Header** | `x-api-key: your-api-key` |
 
-也支持 SSE 长连接方式：`https://aitoearn.ai/api/unified/sse`
+SSE transport is also available: `https://aitoearn.ai/api/unified/sse`
 
 </details>
 
-> 💡 如果你是自部署用户，将 `aitoearn.ai` 替换为你自己的地址（如 `localhost:8080`）。
+> 💡 For self-hosted instances, replace `aitoearn.ai` with your own address (e.g., `localhost:8080`).
 
 ---
 
-<h2 id="use-docker">④ Docker 一键部署</h2>
+<h2 id="use-docker">④ Docker One-Click Deploy</h2>
 
-> 前置条件：已安装 [Docker](https://docs.docker.com/get-docker/)
+> Prerequisite: [Docker](https://docs.docker.com/get-docker/) installed
 
-适合想把 AiToEarn 部署在自己服务器上的团队。3 条命令搞定，无需手动安装数据库：
+For teams wanting to run AiToEarn on their own server. 3 commands, no manual database setup:
 
 ```bash
 git clone https://github.com/yikart/AiToEarn.git
@@ -254,50 +248,49 @@ cd AiToEarn
 docker compose up -d
 ```
 
-启动后打开 **[http://localhost:8080](http://localhost:8080)** 即可使用。
+Open **[http://localhost:8080](http://localhost:8080)** and you're ready to go.
 
-#### 配置 Relay（强烈推荐）
+#### Configure Relay (Strongly Recommended)
 
-> **为什么要配 Relay？** 发布内容需要登录社交媒体账号（抖音、小红书、TikTok 等），而这些平台的 OAuth 登录需要开发者凭据。配置 Relay 后，你可以直接借用官方 aitoearn.ai 的凭据完成授权，**不需要自己去各平台申请开发者账号**。
+> **Why Relay?** Publishing content requires logging into social media accounts (TikTok, Instagram, YouTube, etc.), which need OAuth developer credentials. With Relay, you can use the official aitoearn.ai credentials - **no need to register as a developer on each platform**.
 
-在 `docker-compose.yml` 的 `aitoearn-server` 服务中添加（API Key 获取方式见 [上方说明](#get-api-key)）：
+Add to `docker-compose.yml` under `aitoearn-server` (see [How to Get an API Key](#get-api-key)):
 
-请根据 `RELAY_API_KEY` 来源选择 `RELAY_SERVER_URL`：中国版 Key 使用 `https://aitoearn.cn/api`，国际版 Key 使用 `https://aitoearn.ai/api`。环境和 Key 不匹配会导致 401。
+Choose `RELAY_SERVER_URL` based on where `RELAY_API_KEY` was created: use `https://aitoearn.cn/api` for China keys and `https://aitoearn.ai/api` for international keys. A mismatch returns 401.
 
 ```yaml
 RELAY_SERVER_URL: https://aitoearn.ai/api
-RELAY_API_KEY: 你的API-Key
+RELAY_API_KEY: your-api-key
 RELAY_CALLBACK_URL: http://localhost:8080/api/plat/relay-callback
 ```
 
-然后重启：`docker compose restart aitoearn-server`
+Then restart: `docker compose restart aitoearn-server`
 
-> 📖 完整部署指南（生产环境配置、AI 服务、OAuth、存储等）请参阅 [DOCKER_DEPLOYMENT_CN.md](DOCKER_DEPLOYMENT_CN.md)。
+> 📖 Full deployment guide (production config, AI services, OAuth, storage, etc.): [DOCKER_DEPLOYMENT_EN.md](DOCKER_DEPLOYMENT_EN.md).
 
 ---
 
-<h2 id="use-source">⑤ 源码开发</h2>
+<h2 id="use-source">⑤ Build from Source</h2>
 
 <details>
-<summary>🧪 手动运行后端和前端（开发模式）</summary>
+<summary>🧪 Run backend & frontend manually (dev mode)</summary>
 
-此模式主要用于本地开发和调试。
-您仍然可以使用 Docker 运行 MongoDB/Redis，或在配置文件中指向您自己的服务。
+For local development and debugging. You can use Docker for MongoDB/Redis, or point to your own services.
 
-#### 1. 启动后端服务
+#### 1. Start the backend services
 
 ```bash
 cd project/aitoearn-backend
 pnpm install
-# 复制配置文件用于本地开发
+# Copy config files for local development
 cp apps/aitoearn-ai/config/config.js apps/aitoearn-ai/config/local.config.js
 cp apps/aitoearn-server/config/config.js apps/aitoearn-server/config/local.config.js
 pnpm nx serve aitoearn-ai
-# 在另一个终端
+# in another terminal
 pnpm nx serve aitoearn-server
 ```
 
-#### 2. 启动前端 `aitoearn-web`
+#### 2. Start the frontend `aitoearn-web`
 
 ```bash
 pnpm install
@@ -307,44 +300,45 @@ pnpm run dev
 </details>
 
 <details>
-<summary>🖥️ 启动 Electron 桌面项目</summary>
+<summary>🖥️ Start Electron desktop project</summary>
 
 ```bash
-# 克隆仓库
+# Clone the repo
 git clone https://github.com/yikart/AttAiToEarn.git
 
-# 进入目录
+# Enter directory
 cd AttAiToEarn
 
-# 安装依赖
+# Install dependencies
 npm install
 
-# 编译 sqlite（better-sqlite3 需要 node-gyp 和本地 Python）
+# Compile sqlite (better-sqlite3 requires node-gyp and local Python)
 npm run rebuild
 
-# 启动开发
+# Start development
 npm run dev
 ```
 
-Electron 项目为 AiToEarn 提供桌面客户端。
+The Electron project provides a desktop client for AiToEarn.
 
 </details>
 
-## 贡献指南
+## Contributing
 
-请查看 [贡献指南](./CONTRIBUTING.md) 开始参与。
+Please see [Contributing Guide](./CONTRIBUTING.md) to get started.
 
-## 联系
+## Contact
 
-如果你在使用过程中遇到困难、使用问题或异常情况，优先通过 [GitHub Issues](https://github.com/yikart/AiToEarn/issues) 提交反馈，方便我们统一跟进和处理。
+If you run into usage difficulties, questions, or unexpected behavior, please open a [GitHub Issue](https://github.com/yikart/AiToEarn/issues) first so we can track and respond in one place.
 
 - Telegram: [https://t.me/harryyyy2025](https://t.me/harryyyy2025)
-- 微信：扫码添加
+- WeChat: Scan to add
 
-<img src="presentation/wechat.jpg" alt="微信二维码" width="200">
+<img src="presentation/wechat.jpg" alt="WeChat QR Code" width="200">
 
-## 推荐
-- [AtomGit托管](https://atomgit.com/yikart/AitoEarn)
+## Recommended
+
+- [AtomGit mirror](https://atomgit.com/yikart/AitoEarn)
 - [MuseTalk](https://github.com/TMElyralab/MuseTalk)
 - [video_spider](https://github.com/5ime/video_spider)
 - [CosyVoice](https://github.com/FunAudioLLM/CosyVoice?tab=readme-ov-file)

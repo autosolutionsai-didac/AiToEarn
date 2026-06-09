@@ -1,4 +1,4 @@
-# [Aitoearn: The Best Open-Source AI Agent for Content Marketing](https://aitoearn.ai)
+# [AiToEarn: AI content marketing agent for one-person companies](https://aitoearn.ai)
 
 <a href="https://trendshift.io/repositories/20785" target="_blank"><img src="https://trendshift.io/api/badge/repositories/20785" alt="yikart%2FAiToEarn | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
@@ -6,9 +6,9 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Required Node.JS 20.18.x](https://img.shields.io/static/v1?label=node&message=20.18.x&logo=node.js&color=3f893e)](https://nodejs.org/about/releases)
 
-English | [简体中文](README.md) | [日本語](README_JA.md)
+English | [简体中文](README_ZH.md) | [日本語](README_JA.md)
 
-**Monetize · Publish · Engage · Create — all in one platform.**
+**Monetize · Publish · Engage · Create - all in one platform.**
 
 AiToEarn helps OPCs (One-Person Companies), creators, brands, and businesses build, distribute, and monetize content with **AI-powered automation** across the world's most popular platforms.
 
@@ -29,10 +29,10 @@ Douyin, Xiaohongshu (Rednote), Kuaishou, Bilibili, WeChat Channels, WeChat Offic
 
 ## What's New
 
-- **2026-05-21**: [2.4 version](https://github.com/yikart/AiToEarn/releases/tag/v2.4.0) — Draft generation now supports HappyHorse 1.0 and Seedance 2.0, with improved batch video/image-text draft generation, multi-model selection, reference images/videos, target-platform limits, and caption prompts; refreshed interface style and enhanced Twitter/X exploration and engagement.
+- **2026-05-21**: [2.4 version](https://github.com/yikart/AiToEarn/releases/tag/v2.4.0) - Draft generation now supports HappyHorse 1.0 and Seedance 2.0, with improved batch video/image-text draft generation, multi-model selection, reference images/videos, target-platform limits, and caption prompts; refreshed interface style and enhanced Twitter/X exploration and engagement.
 - **2026-04-20**: OpenClaw now supports AiToEarn earning workflows, so you can receive and execute monetization tasks directly inside OpenClaw.
-- **2026-03-26**: [2.1 version](https://www.aitoearn.ai/) — Content marketplace launched; added OpenClaw support for using AiToEarn directly within OpenClaw; added MCP protocol support for using AiToEarn in Claude, Cursor, and any MCP-compatible Agent or LLM.
-- **2026-02-07**: [1.8.0 version](https://www.aitoearn.ai/) — Added offline business promotion solutions for restaurants, retail stores, hotels, beauty salons, gyms, and more.
+- **2026-03-26**: [2.1 version](https://www.aitoearn.ai/) - Content marketplace launched; added OpenClaw support for using AiToEarn directly within OpenClaw; added MCP protocol support for using AiToEarn in Claude, Cursor, and any MCP-compatible Agent or LLM.
+- **2026-02-07**: [1.8.0 version](https://www.aitoearn.ai/) - Added offline business promotion solutions for restaurants, retail stores, hotels, beauty salons, gyms, and more.
 - **2025-12-15**: "All In Agent" arrives! We've introduced a super AI agent that can automatically generate and publish content. [v1.4.3](https://github.com/yikart/AiToEarn/releases/tag/v1.4.3)
 - **2025-11-28**: Support automatic updates within the application. Added AI functions: abbreviation, expansion, image creation, video creation, tag generation, etc. [v1.4.0](https://github.com/yikart/AiToEarn/releases/tag/v1.4.0)
 - **2025-11-12**: The first open-source, fully usable version. [v1.3.2](https://github.com/yikart/AiToEarn/releases/tag/v1.3.2)
@@ -61,7 +61,7 @@ AiToEarn provides four core Agent capabilities around the creator's full monetiz
 
 ---
 
-### 💰 Monetize — Earn from Your Content
+### 💰 Monetize - Earn from Your Content
 
 The core mission of AiToEarn: **help every creator earn money**.
 
@@ -77,9 +77,9 @@ Creators can sell content on the platform to complete brand promotion tasks. All
 
 ---
 
-### 📢 Publish — Content Publishing Agent
+### 📢 Publish - Content Publishing Agent
 
-Distribute content to 10+ major platforms worldwide with one click — no more manual posting on each platform.
+Distribute content to 10+ major platforms worldwide with one click - no more manual posting on each platform.
 
 - **Multi-Platform Distribution**: Douyin, Kwai, Bilibili, Rednote, WeChat Channels, WeChat Official Accounts, TikTok, YouTube, Facebook, Instagram, Threads, X (Twitter), Pinterest, LinkedIn
 - **Calendar Scheduler**: Plan and coordinate content publishing across all platforms like a calendar
@@ -94,11 +94,11 @@ Distribute content to 10+ major platforms worldwide with one click — no more m
 
 ---
 
-### 💬 Engage — Content Engagement Agent
+### 💬 Engage - Content Engagement Agent
 
 Automate engagement operations across all supported platforms via the AiToEarn browser extension.
 
-- **Automated Actions**: Auto-like, bookmark, and follow — batch operations at scale
+- **Automated Actions**: Auto-like, bookmark, and follow - batch operations at scale
 - **AI Smart Replies**: Use LLMs to generate targeted replies for each comment
 - **Comment Mining**: Detect high-conversion signals like "link please" or "how to buy" and respond instantly
 - **Brand Monitoring**: Track brand mentions in real-time and proactively join trending conversations
@@ -111,15 +111,15 @@ Automate engagement operations across all supported platforms via the AiToEarn b
 
 ---
 
-### 🎨 Create — Content Creation Agent
+### 🎨 Create - Content Creation Agent
 
-We've rebuilt the content creation workflow with Agents. Just tell the Agent what you need — it handles everything from idea to finished product.
+We've rebuilt the content creation workflow with Agents. Just tell the Agent what you need - it handles everything from idea to finished product.
 
 **Video Content**: The Agent automatically invokes video generation models (Grok, Veo, Seedance, etc.), video translation modules, and video editing modules to produce a complete video.
 
 **Image & Text Content**: Supports top-tier image models like Nano Banana to create high-quality visual content automatically.
 
-**Batch Generation**: Submit creation tasks in bulk — the Agent generates multiple pieces of content in parallel, perfect for matrix account operations and large-scale content distribution.
+**Batch Generation**: Submit creation tasks in bulk - the Agent generates multiple pieces of content in parallel, perfect for matrix account operations and large-scale content distribution.
 
 > ▶ Watch Demo Video
 
@@ -131,7 +131,7 @@ We've rebuilt the content creation workflow with Agents. Just tell the Agent wha
 
 <h2 id="use-web">① Use the Website</h2>
 
-The simplest way — just open your browser:
+The simplest way - just open your browser:
 
 - 🇨🇳 China users: **[aitoearn.cn](https://aitoearn.cn/)**
 - 🌍 International users: **[aitoearn.ai](https://aitoearn.ai/)**
@@ -252,7 +252,7 @@ Open **[http://localhost:8080](http://localhost:8080)** and you're ready to go.
 
 #### Configure Relay (Strongly Recommended)
 
-> **Why Relay?** Publishing content requires logging into social media accounts (TikTok, Instagram, YouTube, etc.), which need OAuth developer credentials. With Relay, you can use the official aitoearn.ai credentials — **no need to register as a developer on each platform**.
+> **Why Relay?** Publishing content requires logging into social media accounts (TikTok, Instagram, YouTube, etc.), which need OAuth developer credentials. With Relay, you can use the official aitoearn.ai credentials - **no need to register as a developer on each platform**.
 
 Add to `docker-compose.yml` under `aitoearn-server` (see [How to Get an API Key](#get-api-key)):
 
@@ -338,6 +338,7 @@ If you run into usage difficulties, questions, or unexpected behavior, please op
 
 ## Recommended
 
+- [AtomGit mirror](https://atomgit.com/yikart/AitoEarn)
 - [MuseTalk](https://github.com/TMElyralab/MuseTalk)
 - [video_spider](https://github.com/5ime/video_spider)
 - [CosyVoice](https://github.com/FunAudioLLM/CosyVoice?tab=readme-ov-file)
